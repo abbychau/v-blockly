@@ -8,10 +8,9 @@ var { Blockly, goog } = require('blockly/blockly_compressed.js')
 window.Blockly = Blockly
 window.goog = goog
 
-
 // Import with side effects
-// eslint-disable-next-line import/no-webpack-loader-syntax
 // this does not work in node testing (global goog is not available)
+// eslint-disable-next-line import/no-webpack-loader-syntax
 require('blockly/msg/js/en.js')
 // eslint-disable-next-line import/no-webpack-loader-syntax
 require('blockly/blocks_compressed.js')

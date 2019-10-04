@@ -104,16 +104,16 @@ let VBlockly = {
         return new Promise((resolve) => { resolve(null) })
       }
       let promise = fetch(this.toolbox)
-          .then(resp => {
-            return resp.text()
-          })
-          .then(text => {
-            let parser = new DOMParser()
-            let doc = parser.parseFromString(text, 'application/xml')
-            // append the xml elemt to this document
-            let toolbox = doc.firstChild
-            return toolbox
-          })
+        .then(resp => {
+          return resp.text()
+        })
+        .then(text => {
+          let parser = new DOMParser()
+          let doc = parser.parseFromString(text, 'application/xml')
+          // append the xml elemt to this document
+          let toolbox = doc.firstChild
+          return toolbox
+        })
       return promise
     },
     loadBlocks () {
@@ -121,9 +121,9 @@ let VBlockly = {
         return new Promise(resolve => resolve([]))
       }
       let promise = fetch(this.blocks)
-          .then(resp => {
-            return resp.json()
-          })
+        .then(resp => {
+          return resp.json()
+        })
       return promise
     },
     loadStubs () {
@@ -131,14 +131,14 @@ let VBlockly = {
         return new Promise((resolve) => { resolve(null) })
       }
       let promise = fetch(this.stubs)
-          .then(resp => {
-            return resp.text()
-          })
-          .then(text => {
-            // TODO: use src??
-            // eslint-disable-next-line
+        .then(resp => {
+          return resp.text()
+        })
+        .then(text => {
+          // TODO: use src??
+          // eslint-disable-next-line
             return eval(text)
-          })
+        })
       return promise
     },
     loadWorkspace () {
@@ -146,16 +146,16 @@ let VBlockly = {
         return new Promise((resolve) => { resolve(null) })
       }
       let promise = fetch(this.workspace)
-          .then(resp => {
-            return resp.text()
-          })
-          .then(text => {
-            let parser = new DOMParser()
-            let doc = parser.parseFromString(text, 'application/xml')
-            // append the xml elemt to this document
-            let toolbox = doc.firstChild
-            return toolbox
-          })
+        .then(resp => {
+          return resp.text()
+        })
+        .then(text => {
+          let parser = new DOMParser()
+          let doc = parser.parseFromString(text, 'application/xml')
+          // append the xml elemt to this document
+          let toolbox = doc.firstChild
+          return toolbox
+        })
       return promise
     },
     workspaceChanged (event) {

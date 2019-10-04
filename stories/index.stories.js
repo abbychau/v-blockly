@@ -1,11 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
 
-import { storiesOf } from '@storybook/vue';
-import { action, actions } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withKnobs, button } from '@storybook/addon-knobs';
-import Vue from 'vue';
-import VBlockly from '../src/VBlockly.vue';
+import { storiesOf } from '@storybook/vue'
+import { action, actions } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
+import { withKnobs, button } from '@storybook/addon-knobs'
+import Vue from 'vue'
+import VBlockly, { Blockly, goog } from '../src/VBlockly.vue'
+console.log(Blockly)
+console.log(goog)
 
 Vue.component('v-blockly', VBlockly)
 
@@ -21,9 +23,9 @@ storiesOf('VBlockly', module)
       template: '<v-blockly workspace="workspace-collapsed.xml" toolbox="toolbox.xml"></v-blockly>',
       mounted () {
         this.normal()
-        setTimeout(() => {this.small}, 1000)
-        setTimeout(() => {this.big}, 3000)
-        setTimeout(() => {this.normal}, 4000)
+        setTimeout(() => { this.small }, 1000)
+        setTimeout(() => { this.big }, 3000)
+        setTimeout(() => { this.normal }, 4000)
         button('small', () => {
           this.small()
         })
@@ -33,7 +35,6 @@ storiesOf('VBlockly', module)
         button('normal', () => {
           this.normal()
         })
-
       },
       methods: {
         small () {

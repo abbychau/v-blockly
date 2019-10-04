@@ -1,10 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-const jsdom = require("jsdom")
+import VBlockly from '@/VBlockly'
+const jsdom = require('jsdom')
 const { JSDOM } = jsdom
 global.dom = new JSDOM('<!doctype html><html><body></body></html>')
-global.window = dom.window
-import VBlockly from '@/VBlockly'
-
+global.window = global.dom.window
 
 // describe('VBlockly.vue', () => {
 //   it('renders', () => {
