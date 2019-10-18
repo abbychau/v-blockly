@@ -8,7 +8,7 @@
 <script>
 import Vue from 'vue'
 
-import { Blockly, goog } from './blockly'
+import { Blockly } from 'blockly'
 
 // ignore xml element and block element
 Vue.config.ignoredElements.push('mutation')
@@ -193,8 +193,7 @@ let VBlockly = {
 // also  export Blockly  and goog
 export {
   VBlockly as default,
-  Blockly,
-  goog
+  Blockly
 }
 
 </script>

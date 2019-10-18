@@ -3,7 +3,7 @@
 // But then using webpack because I use the exports-loader to be able to import blockly
 
 // Import vue component
-import VBlockly, { Blockly, goog } from './VBlockly.vue'
+import VBlockly, { Blockly } from './VBlockly.vue'
 
 // Declare install function executed by Vue.use()
 export function install (Vue) {
@@ -31,6 +31,5 @@ if (GlobalVue) {
 // To allow use as module (npm/webpack/etc.) export component
 export {
   VBlockly as default,
-  Blockly,
-  goog
+  Blockly
 }

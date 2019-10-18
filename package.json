@@ -32,7 +32,7 @@
     "babel-jest": "^25.0.0",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
-    "blockly": "git://github.com/google/blockly.git#1.20190419.0",
+    "blockly": "^3.20191014.1",
     "core-js": "^3.2.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
