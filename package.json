@@ -1,6 +1,6 @@
 {
   "name": "vue-blockly",
-  "version": "0.2.25",
+  "version": "0.2.26",
   "author": "Abby Chau",
   "scripts": {
     "serve": "vue-cli-service serve",
